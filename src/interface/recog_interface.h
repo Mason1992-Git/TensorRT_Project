@@ -26,9 +26,9 @@ extern "C" {
 	};
 	//onnx2engine
 	bool compile_yolo_engine(int deviceid, const char* model_path, const char* _mode, const char* _type, const char* name);
-	//creat_infer
+	//creat_yolo_infer_engine
 	bool creat_yolo_infer_engine(int deviceid, const char* engine_file, const char* _type, std::shared_ptr<Yolo::Infer>& handle);
-	//infer
+	//yolo_infer
 	bool yolo_infer_result(cv::Mat& SrcImg, std::shared_ptr<Yolo::Infer>& handle, std::vector<Output_Yolo>& output);
 
 #ifdef __cplusplus
